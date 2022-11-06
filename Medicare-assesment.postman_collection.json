@@ -1,0 +1,477 @@
+{
+	"info": {
+		"_postman_id": "21fe1651-35e6-47b5-b484-e5815cde95ea",
+		"name": "Medicare-assesment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Extract all users",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Anoop\",\r\n    \"email\": \"aallenki@gmail.com\",\r\n    \"password\": \"admin\",\r\n    \"country\": \"India\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9797/user/storeUsers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9797",
+					"path": [
+						"user",
+						"storeUsers"
+					]
+				},
+				"description": "Get all Users"
+			},
+			"response": []
+		},
+		{
+			"name": "Sign Up user",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "saas",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "saas-platform",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Anoop\",\r\n    \"email\": \"avllenki@gmail.com\",\r\n    \"password\": \"admin\",\r\n    \"country\": \"India\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9797/user/storeUsers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9797",
+					"path": [
+						"user",
+						"storeUsers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "saas",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "saas-platform",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"Admin\",\r\n    \"email\": \"admin@gmail.com\",\r\n    \"password\": \"admin77\",\r\n    \"country\": \"India\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9797/user/updateUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9797",
+					"path": [
+						"user",
+						"updateUser"
+					]
+				},
+				"description": "Update user"
+			},
+			"response": []
+		},
+		{
+			"name": "Extract user by Id",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "saas",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "saas-platform",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9797/user/findById?id=5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9797",
+					"path": [
+						"user",
+						"findById"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "5"
+						}
+					]
+				},
+				"description": "FindByID to get all user records"
+			},
+			"response": []
+		},
+		{
+			"name": "Login Application Validation",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "saas",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "saas-platform",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9797/user/signin?email=vvallenki@gmail.com&pwd=admin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9797",
+					"path": [
+						"user",
+						"signin"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "vvallenki@gmail.com"
+						},
+						{
+							"key": "pwd",
+							"value": "admin"
+						}
+					]
+				},
+				"description": "Sign-in"
+			},
+			"response": []
+		},
+		{
+			"name": "Configure Medicine",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "saas",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "saas-platform",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Crocin-DS-240\",\r\n    \"price\": 67.5,\r\n    \"category\": \"pain killer\",\r\n    \"enableFlag\": \"y\",\r\n    \"url\": \"https://mypuducherry.com/wp-content/uploads/2017/12/crocin-60-min-1.jpg\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9797/medicine/configureMedicine",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9797",
+					"path": [
+						"medicine",
+						"configureMedicine"
+					]
+				},
+				"description": "Configure Medcine"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Medicine",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "saas",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "saas-platform",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"3\",\r\n    \"name\": \"Crocin-DS-240\",\r\n    \"price\": 77.5,\r\n    \"category\": \"pain killer\",\r\n    \"enableFlag\": \"y\",\r\n    \"url\": \"https://mypuducherry.com/wp-content/uploads/2017/12/crocin-60-min-1.jpg\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9797/medicine/updateMedicine",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9797",
+					"path": [
+						"medicine",
+						"updateMedicine"
+					]
+				},
+				"description": "Updating Medicine"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Medicine by Id",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "saas",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "saas-platform",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9797/medicine/deleteMedicine/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9797",
+					"path": [
+						"medicine",
+						"deleteMedicine",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Extract all Medicines",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "saas",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "saas-platform",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9797/medicine/getAllMedicines",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9797",
+					"path": [
+						"medicine",
+						"getAllMedicines"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Extract Medicine by Id",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "saas",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "saas-platform",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "jso",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9797/medicine/findById?id=4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9797",
+					"path": [
+						"medicine",
+						"findById"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search by Medicine Name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9797/medicine/findByName?input=obj",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9797",
+					"path": [
+						"medicine",
+						"findByName"
+					],
+					"query": [
+						{
+							"key": "input",
+							"value": "obj"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

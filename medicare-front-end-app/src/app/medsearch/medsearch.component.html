@@ -1,0 +1,62 @@
+<div>
+
+    <!--    <p>medsearch works!</p>
+        -->
+   <br/>
+   <br/>
+    
+        <div>
+            <h3 style="text-align: center; background-color: blueviolet; color: white;">Medicines Searh</h3>
+            <label> Search By Medcines </label> 
+            <input type="text" class="form-control"  [(ngModel)]="MedicineName">  <br/><br/>
+            <input type="submit" value="submit" (click)='serachMedicine()'/>    !
+            <input type="reset" value="reset"/> 
+        </div>
+
+ 
+ <!-- 
+<div>
+    <form style="border: 100px; background-color:cornsilk ;" [formGroup]="SearchRef" (ngSubmit)="onSearch()" >
+        <h3 style="text-align: center; background-color: blueviolet; color: white;">Medicines Searh</h3>
+        <label> Search Medicine </label>
+        <input type="text" formControlName="name" (change)="onSearch()"   /> <br/><br/> 
+        <div>
+            <button type="submit"> Search </button>    !
+            <input type="reset" value="reset"/>
+        </div>     
+        
+     
+        <button type="button" (click)='serachMedicine()'  class="btn btn-primary" >Search</button>       ! 
+       
+        <input type="submit" value="submit" (click)='serachMedicine()'/> 
+              !  
+         
+       
+        
+       
+    </form>
+</div>
+
+  -->
+
+
+<hr/>
+
+<h3 style="text-align:center ; color:blue"> Medcines List </h3>
+<div *ngFor="let m of m2" >
+    
+    <span>Name : {{m.name}} </span>
+
+</div>
+<!-- 
+<div *ngFor="let m of m2">   
+    <input type="radio" name="medcineName"  
+    value="{{m.name}}"
+    (change)="radioChnageHandler($event)"  
+    />
+    <i> {{selMedicne}}</i>   
+   
+</div>
+-->
+
+</div>
